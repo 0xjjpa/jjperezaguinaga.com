@@ -1,7 +1,21 @@
-builder:
-  build: builder
-  volumes:
-    - node_modules:/projects
+balancer:
+  build: balancer
+  restart: always
+  ports:
+    - "80:80"
+  links:
+    - index:index
+
+index:
+  build: node_modules/index.jjperezaguinaga.com
+  restart: always
+  ports:
+    - "8080"
+
+# builder:
+#   build: builder
+#   volumes:
+#     - node_modules:/projects
       
 #landing-page:
 #  build: node_modules/index.jjperezaguinaga
