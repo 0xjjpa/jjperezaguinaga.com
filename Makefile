@@ -1,5 +1,7 @@
 SHELL=/bin/bash
 
+.DEFAULT_GOAL := build-index
+
 setup:
 	npm install
 
@@ -10,5 +12,4 @@ setup-dev:
 	# eval "$(docker-machine env jjperezaguinaga.com-dev)"
 
 build-index:
-	cd ./node_modules/index.jjperezaguinaga.com
-	$(MAKE)
+	$(MAKE) -C ./node_modules/index.jjperezaguinaga.com
