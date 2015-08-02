@@ -1,4 +1,9 @@
-landing-page:
-  build: node_modules/index.jjperezaguinaga
-  ports:
-    - "8080:8080"
+builder:
+  build: builder
+  volumes:
+    - node_modules:/projects
+      
+#landing-page:
+#  build: node_modules/index.jjperezaguinaga
+#  ports:
+#    - "8080:8080"
