@@ -16,3 +16,5 @@ build-index:
 
 build-articles:
 	$(MAKE) -C ./node_modules/articles.jjperezaguinaga.com
+
+build: build-index build-articles

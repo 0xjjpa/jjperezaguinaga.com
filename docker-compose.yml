@@ -5,9 +5,16 @@ balancer:
     - "80:80"
   links:
     - index:index
+    - articles:articles
 
 index:
   build: node_modules/index.jjperezaguinaga.com
+  restart: always
+  ports:
+    - "8080"
+
+articles:
+  build: node_modules/articles.jjperezaguinaga.com
   restart: always
   ports:
     - "8080"
