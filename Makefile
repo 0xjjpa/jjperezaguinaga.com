@@ -13,3 +13,6 @@ setup-dev:
 
 build-index:
 	$(MAKE) -C ./node_modules/index.jjperezaguinaga.com
+
+build-articles:
+	$(MAKE) -C ./node_modules/articles.jjperezaguinaga.com
