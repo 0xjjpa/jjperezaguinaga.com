@@ -1,0 +1,4 @@
+landing-page:
+  build: node_modules/index.jjperezaguinaga
+  ports:
+    - "8080:8080"
