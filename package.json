@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/jjperezaguinaga/jjperezaguinaga.com/issues"
   },
-  "homepage": "https://github.com/jjperezaguinaga/jjperezaguinaga.com#readme"
+  "homepage": "https://github.com/jjperezaguinaga/jjperezaguinaga.com#readme",
+  "dependencies": {
+    "index.jjperezaguinaga": "git+ssh://github.com/jjperezaguinaga/index.jjperezaguinaga.com.git#development"
+  }
 }
