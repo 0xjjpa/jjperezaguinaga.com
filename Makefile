@@ -2,6 +2,22 @@ SHELL=/bin/bash
 
 .DEFAULT_GOAL := build-index
 
+DOCKER=/usr/local/bin/docker
+
+# Configurable variables
+DIST=./balancer
+DOCKER-FILE=Dockerfile
+DOCKER-REPO=jjperezaguinaga/balancer
+DOCKER-REGISTRY=tutum.co
+
+build-balancer:
+	$(DOCKER) build -t=$(DOCKER-REPO) -f=balancer/Dockerfile $(DIST)
+
+deploy-docker:
+	# Assumes docker login
+	$(DOCKER) tag -f $(DOCKER-REPO) $(DOCKER-REGISTRY)/$(DOCKER-REPO)
+	$(DOCKER) push $(DOCKER-REGISTRY)/$(DOCKER-REPO)
+
 setup:
 	npm install
 
