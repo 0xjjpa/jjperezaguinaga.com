@@ -1,5 +1,5 @@
 balancer:
-  build: balancer
+  image: jjperezaguinaga/balancer
   restart: always
   ports:
     - "80:80"
@@ -8,13 +8,13 @@ balancer:
     - articles:articles
 
 index:
-  build: node_modules/index.jjperezaguinaga.com
+  image: jjperezaguinaga/webpage
   restart: always
   ports:
     - "8080"
 
 articles:
-  build: node_modules/articles.jjperezaguinaga.com
+  image: jjperezaguinaga/articles
   restart: always
   ports:
     - "8080"
