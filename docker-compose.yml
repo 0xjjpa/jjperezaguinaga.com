@@ -1,5 +1,5 @@
 balancer:
-  image: jjperezaguinaga/balancer
+  image: tutum.co/jjperezaguinaga/balancer
   restart: always
   ports:
     - "80:80"
@@ -8,13 +8,13 @@ balancer:
     - articles:articles
 
 index:
-  image: jjperezaguinaga/webpage
+  image: tutum.co/jjperezaguinaga/webpage
   restart: always
   ports:
     - "8080"
 
 articles:
-  image: jjperezaguinaga/articles
+  image: tutum.co/jjperezaguinaga/articles
   restart: always
   ports:
     - "8080"
