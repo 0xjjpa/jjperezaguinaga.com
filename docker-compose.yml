@@ -1,0 +1,20 @@
+balancer:
+  image: tutum.co/jjperezaguinaga/balancer
+  restart: always
+  ports:
+    - "80:80"
+  links:
+    - index:index
+    - articles:articles
+
+index:
+  image: tutum.co/jjperezaguinaga/webpage
+  restart: always
+  ports:
+    - "8080"
+
+articles:
+  image: tutum.co/jjperezaguinaga/articles
+  restart: always
+  ports:
+    - "8080"

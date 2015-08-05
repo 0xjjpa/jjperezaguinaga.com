@@ -1,0 +1,19 @@
+{
+  "name": "jjperezaguinaga.com",
+  "version": "0.1.0",
+  "description": "Entry point for all *.jjperezaguinaga.com projects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jjperezaguinaga/jjperezaguinaga.com.git"
+  },
+  "author": "Jose Aguinaga <me@jjperezaguinaga.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jjperezaguinaga/jjperezaguinaga.com/issues"
+  },
+  "homepage": "https://github.com/jjperezaguinaga/jjperezaguinaga.com#readme"
+}
