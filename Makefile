@@ -1,6 +1,7 @@
 SHELL=/bin/bash
 DOCKER=/usr/local/bin/docker
 DOCKER-COMPOSE=/usr/local/bin/docker-compose
+DOCKER-MACHINE=/usr/local/bin/docker-machine
 
 # Configurable variables
 DIST=./balancer
@@ -33,3 +34,8 @@ production: build deploy
 	# Allow execution of following within Makefile, see Issue #3
 	# eval "$(docker-machine env jjperezaguinaga.com-dev)"
 
+create-machine:
+	$(DOCKER-MACHINE) create --driver generic \
+		--generic-ip-address=$(IP) \
+		--generic-ssh-key=$(HOME)/.ssh/id_rsa \
+		jjperezaguinaga.com-01
