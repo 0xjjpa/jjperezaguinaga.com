@@ -37,4 +37,5 @@ production: build deploy
 create-machine:
 	$(DOCKER-MACHINE) create --driver digitalocean \
 		--digitalocean-access-token=$(TOKEN) \
+		--digitalocean-region=fra1 \
 		jjperezaguinaga.com-01
