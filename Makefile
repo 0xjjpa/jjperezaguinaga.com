@@ -35,7 +35,6 @@ production: build deploy
 	# eval "$(docker-machine env jjperezaguinaga.com-dev)"
 
 create-machine:
-	$(DOCKER-MACHINE) create --driver generic \
-		--generic-ip-address=$(IP) \
-		--generic-ssh-key=$(HOME)/.ssh/id_rsa \
+	$(DOCKER-MACHINE) create --driver digitalocean \
+		--digitalocean-access-token=$(TOKEN) \
 		jjperezaguinaga.com-01
